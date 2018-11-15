@@ -1,0 +1,65 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<style>
+#edition-chapter-title {}
+
+#edition-chapter-content-row {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+#edition-chapter-notes-row {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+#edition-chapter-pages-row {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+</style>
+
+<div class="container">
+	<div class="row" id="edition-chapter-content-row">
+		<div class="col-sm-12">
+			<h2 id="edition-chapter-title" class="text-center">{{chapter.title}}</h2>
+			<div class="edition-chapter-content">{{chapter.content}}</div>
+		</div>
+	</div>
+
+	<div class="row" id="edition-chapter-notes-row">
+		<div class="col-sm-12">
+			<h4>Headnotes: </h4>
+			<div class="accordion" id="accordion">
+			{% for item in chapter.get_field('chapter_notes') %}
+				<div class="card">
+	  		    	<div class="card-header" id="heading{{loop.index}}">
+	  		      		<h5 class="mb-0">
+	  		        		<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{loop.index}}" aria-expanded="true" aria-controls="collapse{{loop.index}}">
+	  		          			Headnote {{loop.index}}
+	  		        		</button>
+	  		      		</h5>
+	  		    	</div>
+	  		    	<div id="collapse{{loop.index}}" class="collapse" aria-labelledby="heading{{loop.index}}" data-parent="#accordion">
+	  		      		<div class="card-body">{{item.note}}</div>
+	  		    	</div>
+	  			</div>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+
+	<div class="row" id="edition-chapter-pages-row">
+		<div class="col-sm-12">
+			<h4>Pages: </h4>
+			<div class="list-group">
+			{% for item in chapter.get_field('chapter_pages') %}
+				<a href="{{ item.page.link }}" class="list-group-item list-group-item-action">{{ item.page.title }}</a>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

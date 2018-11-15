@@ -1,0 +1,15 @@
+<!doctype html>
+<html {{ site.language_attributes }}>
+    <head>
+        <title>{% if wp_title %}{{ wp_title }} - {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
+        <meta charset="utf-8">
+        <meta name="description" content="{{ site.description }}">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="author" href="{{ site.theme.link }}/humans.txt" />
+        <link rel="pingback" href="{{ site.pingback_url }}" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+      	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
+        <link rel="stylesheet" href="{{ site.theme.link }}/style.css" type="text/css" media="screen" />
+        {{function('wp_head')}}

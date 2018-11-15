@@ -1,0 +1,33 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+	{% set current_page = 'TEST' %}	
+	<body>
+		{% block header %}
+			{% include "menu.twig" with {'menu': menu.get_items, 'current_page': current_page} %}
+		{% endblock %}
+
+
+		<section class="">
+			<div class="container-fluid">
+				{% if title %}<h1>{{title}}</h1>{% endif %}
+			    {% block content %}
+				    Sorry, no content
+			    {% endblock %}
+		    </div>
+	  	</section>
+
+		{% block footer %}
+			{% include 'footer.twig' %}
+			{{ function('wp_footer') }}
+		{% endblock %}
+
+
+		{% include 'scripts.twig' %}
+
+	</body>
+</html>

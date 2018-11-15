@@ -1,0 +1,240 @@
+/*
+ * Theme Name: Gage Project (Timber Theme)
+ * Description: Made with Timber Starter Theme
+ * Author: Tyler Grace (ADHC)
+*/
+
+html,body{
+    height: 100%
+}
+
+body {
+	background-color: #f3f3f3;
+}
+
+footer {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	background: #808080;
+	border-top: solid #cd2b0a 5px;
+	color: #fff;
+	text-align: center;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+footer a {
+	color: #fff;
+}
+
+.btn-primary {
+	background-color: #cd2b0a;
+	border-color: #cd2b0a;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+	background-color: #941900;
+	border-color: #941900;
+	box-shadow: none;
+	color: #fff;
+}
+
+.page-header-container {
+	text-align: center;
+	padding: 0;
+	margin-bottom: 1.5em;
+}
+
+/* nav styles */
+.navbar {
+	border-bottom: solid #cd2b0a 5px;
+	border-top: solid transparent 5px;
+
+	font-family: dayrom;
+	font-variant: small-caps;
+	/* text-transform: uppercase; */
+
+	padding: 2rem 1rem;
+	margin-bottom: 0;
+    background-color: #292b2c;
+}
+
+.navbar-brand {
+	font-size: 1.8rem;
+    color: #fff;
+}
+
+.navbar-brand:focus, .navbar-brand:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-item {
+	font-size: 1.35rem;
+}
+
+.nav-link {
+	font-weight: bold;
+	color: rgba(255,255,255,.5);
+	background-color: transparent;
+	border-bottom: .25rem solid transparent;
+}
+
+.nav-item .active{
+	color: #fff;
+	border-bottom-color: #fff;
+}
+
+.nav-link:hover, .nav-link:focus {
+	border-bottom-color: rgba(255,255,255,.25);
+	color: rgba(255,255,255,.5);
+}
+
+
+
+/* home page styles */
+.jumbotron {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	margin-bottom: 0;
+	background-color: rgba(231, 217, 185, 0.58);
+	padding-left: 0px;
+	padding-right: 0px;
+	min-height: 70%;
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+	max-width: inherit;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+
+
+.front-map {
+	width: 100%;
+}
+
+
+
+/* edition styles */
+.text-edition {
+	line-height: 2.5;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.text-edition-chapter-num {
+	font-size: 1.3em;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+.text-edition-chapter-text {
+	font-size: 1.10em;
+	font-weight: 500;
+	padding-bottom: 15px;
+}
+
+
+.text-edition-container{
+	background-color: #fff;
+	-webkit-box-shadow: 10px 10px 23px -6px rgba(194,194,194,1);
+	-moz-box-shadow: 10px 10px 23px -6px rgba(194,194,194,1);
+	box-shadow: 10px 10px 23px -6px rgba(194,194,194,1);
+	padding: 30px 50px 30px	50px;
+	margin-bottom: 1.5em;
+}
+
+.text-edition-section {
+	margin-top: 1.5em;
+}
+
+
+.annotation-link-container {
+	border: 1px solid grey;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-bottom: 2.5px;
+}
+
+.annotation-link {
+	color: #2b2bda !important;
+	font-weight: bold;
+}
+
+.badge {
+	line-height: 1.35;
+    margin-left: 3px;
+}
+
+#gage-page-img {
+	height: 1500px;
+}
+
+#gage-page-title {
+	margin-top: 53px;
+	margin-bottom: 12px;
+	text-align: right;
+}
+
+#gage-page-text-container{
+	text-align: justify;
+	height: 1500px;
+	max-width: 700px;
+	overflow: auto;
+	margin-right: 0.75rem;
+    margin-left: 0.75rem;
+	padding-right: 0.5rem;
+}
+
+
+
+
+/* page flipper styles */
+.page-item.active .page-link {
+	background-color: #292b2c;
+    border-color: #292b2c;
+}
+
+.page-link:focus, .page-link:hover {
+	color: #6d6868;
+	background-color: rgba(228, 228, 228, 0.49);
+}
+
+.page-link {
+	color: #292b2c;
+
+}
+
+
+
+.col-annotion {
+	display: none;
+}
+
+
+#map-marker {
+	position: relative;
+	top: -58%;
+	right: 11%;
+}
+
+.popup-img {
+	width: 100%;
+}
+
+.popup-btn-container {
+	text-align: center;
+	padding-top: 8px;
+}

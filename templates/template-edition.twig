@@ -1,0 +1,34 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<style>
+#edition-chapters-row {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.list-group-item {
+	font-weight: 600;
+}
+
+.list-group-item.disabled, .list-group-item:disabled {
+	color: #6c757d87;
+}
+</style>
+
+
+<div class="container">
+	<div class="row" id="edition-chapters-row">
+		<div class="col-sm-12">
+			<h4>Chapters: </h4>
+			<div class="list-group">
+			{% for chapter in chapters %}
+				<a href="{{ chapter.link }}" class="list-group-item list-group-item-action {% if not chapter.chapter_pages %} disabled {% endif %}">{{ chapter.title }}</a>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
